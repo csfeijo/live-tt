@@ -1,31 +1,92 @@
+:root {
+  --var-azul: #000715;
+  --var-laranja: #E89900;
+  --var-branco: #FFFFFF;
+  --var-ciano: #00e0ff;
+  --var-salmao: #f36679;
+}
+
+* {
+  font-family: Tahoma;
+}
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: #002244;
-  color: white;
-  font-family: Arial;
+  background: var(--var-azul);
+  color: var(--var-branco);
 }
 
 header {
   display: flex;
-  border-bottom: 1px solid #e89900;
-  box-shadow: 0 0 10px #e89900;
+  border-bottom: 1px solid var(--var-laranja);
+  box-shadow: 0 0 10px var(--var-laranja);
   justify-content: center;
-  background: white;
+  background: var(--var-branco);
   padding: 10px;
+}
+
+.container {
+  width: 500px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.container h1, .container h2 {
+  text-align: center;
+  color: var(--var-ciano);
+}
+
+.container ul {
+  line-height: 40px;
+}
+
+.container input, 
+.container button {
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+.container form {
+  display: flex;
+  justify-content: space-between;
+}
+.container input {
+  width: 80%;
+  border-radius: 80px 0 0 80px;
+}
+.container button {
+  width: 20%;
+  border-radius: 0 80px 80px 0;
+  background: var(--var-salmao);
+  color: var(--var-branco)
+}
+
+#mensagem {
+  display: none;
+  color: var(--var-branco);
+  background: var(--var-laranja);
+  padding: 12px;
+  border-radius: 80px;
+  text-align: center;
 }
 
 /* Falamos rapidamente de responsive design */
 
 @media screen and (max-width: 600px){
   body {
-    color: #002244;    
+    color: var(--var-azul);;    
   }
   header {
-    background: #e89900;
+    background: var(--var-laranja);
   }
 
+  .container {
+    width: 90%;
+    color: var(--var-branco);
+  }
 }
